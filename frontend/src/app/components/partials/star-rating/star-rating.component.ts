@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'star-rating',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './star-rating.component.html',
   styleUrl: './star-rating.component.css'
 })
@@ -30,6 +31,6 @@ export class StarRatingComponent {
     :this.stars >= previousHalf
     ? 'star-half'
     :'star-empty';
-    return `/assests/stars/${imageName}.svg/`;
+    return `./assets/stars/${imageName}.svg/`;
   }
 }

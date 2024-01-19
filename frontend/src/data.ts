@@ -2,14 +2,14 @@ import { Food } from "./app/Shared/Models/Food";
 
 export const sample_foods: Food[] = [
   {
-    id:'1',
-    name: 'Pizza Pepperoni',
+    id:"1",
+    name: "Pizza Pepperoni",
     cookTime: '10-20',
     price: 10,
     favorite: false,
     origins: ['italy'],
     stars: 4.5,
-    imageUrl: 'assets/food-1.jpg',
+    imageUrl: "https://static.wixstatic.com/media/597497_39dfa709d3d845eeaf43eb692e93b31b~mv2.jpg/v1/fill/w_6240,h_4160,al_c,q_90/Pepperoni%20Pizza_1_compressed.jpg",
     tags: ['FastFood', 'Pizza', 'Lunch'],
   },
   {
@@ -20,7 +20,7 @@ export const sample_foods: Food[] = [
     favorite: true,
     origins: ['persia', 'middle east', 'china'],
     stars: 4.7,
-    imageUrl: 'assets/food-2.jpg',
+    imageUrl : "https://www.thereciperebel.com/wp-content/uploads/2021/02/meatball-recipe-www.thereciperebel.com-600-20-of-21.jpg",
     tags: ['SlowFood', 'Lunch'],
   },
   {
@@ -31,7 +31,7 @@ export const sample_foods: Food[] = [
     favorite: false,
     origins: ['germany', 'us'],
     stars: 3.5,
-    imageUrl: 'assets/food-3.jpg',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/McDonald%27s_Quarter_Pounder_with_Cheese%2C_United_States.jpg/1200px-McDonald%27s_Quarter_Pounder_with_Cheese%2C_United_States.jpg',
     tags: ['FastFood', 'Hamburger'],
   },
   {
@@ -42,7 +42,7 @@ export const sample_foods: Food[] = [
     favorite: true,
     origins: ['belgium', 'france'],
     stars: 3.3,
-    imageUrl: 'assets/food-4.jpg',
+    imageUrl: "https://www.allrecipes.com/thmb/-Qlhx70a3HwawPd51kSIiGj-hpE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/4488416-0627cab55d4e44ec80f974fbc67befb7.jpg",
     tags: ['FastFood', 'Fry'],
   },
   {
@@ -53,7 +53,7 @@ export const sample_foods: Food[] = [
     favorite: false,
     origins: ['india', 'asia'],
     stars: 3.0,
-    imageUrl: 'assets/food-5.jpg',
+    imageUrl: "https://www.recipetineats.com/wp-content/uploads/2018/04/Chicken-and-Rice-Soup_8-1.jpg",
     tags: ['SlowFood', 'Soup'],
   },
   {
@@ -64,7 +64,7 @@ export const sample_foods: Food[] = [
     favorite: false,
     origins: ['italy'],
     stars: 4.0,
-    imageUrl: 'assets/food-6.jpg',
+    imageUrl: "https://cdn.loveandlemons.com/wp-content/uploads/2023/02/vegetarian-pizza.jpg",
     tags: ['FastFood', 'Pizza', 'Lunch'],
   },
 ]
