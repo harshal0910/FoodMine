@@ -3,11 +3,11 @@ import { Food } from '../../../Shared/Models/Food';
 import { ActivatedRoute } from '@angular/router';
 import { FoodService } from '../../../services/food.service';
 import { StarRatingComponent } from '../../partials/star-rating/star-rating.component';
-
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-food-page',
   standalone: true,
-  imports: [StarRatingComponent],
+  imports: [StarRatingComponent,CommonModule],
   templateUrl: './food-page.component.html',
   styleUrl: './food-page.component.css'
 })

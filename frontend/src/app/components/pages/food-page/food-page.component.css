@@ -11,7 +11,7 @@
     max-width: 40rem;
 }
 
-.img {
+img {
     border-radius: 3rem;
     flex: 1 0;
     object-fit: cover;
@@ -57,3 +57,54 @@
     border-radius: 2rem;
     background-color: aliceblue;
 }
+
+.tags{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tags a{
+    background-color: #f0f0f0;
+    padding: 0.3rem 1rem;
+    margin: 0.2rem 0.15rem;
+    border-radius: 10rem;
+    font-weight: 600;
+    color: blue;
+}
+
+.cook-time{
+    padding: 0.6rem 2rem 0.6rem;
+}
+
+.cook-time span{
+    padding: 0.6rem 2rem 0.6rem;
+}
+
+.price{
+    font-size: 1.8rem;
+    margin: 2rem 2rem 0;
+    color: green;
+}
+
+.price::before{
+    content: "price: ";
+    color: darkgrey;
+}
+
+button{
+    color:white;
+    background: #e72929;
+    border: none;
+    font-size: 1.2rem;
+    padding: 1rem;
+    border-radius: 10rem;
+    outline: none;
+}
+
+button:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+
+
