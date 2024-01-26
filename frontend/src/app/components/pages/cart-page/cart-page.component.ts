@@ -4,11 +4,11 @@ import { CartService } from '../../../services/cart.service';
 import { CartItem } from '../../../Shared/Models/CartItem';
 import { TitleComponent } from '../../partials/title/title.component';
 import { CommonModule } from '@angular/common';
-
+import { NotFoundComponent } from '../../partials/not-found/not-found.component';
 @Component({
   selector: 'app-cart-page',
   standalone: true,
-  imports: [CommonModule,TitleComponent],
+  imports: [CommonModule,TitleComponent,NotFoundComponent],
   templateUrl: './cart-page.component.html',
   styleUrl: './cart-page.component.css'
 })
