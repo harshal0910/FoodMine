@@ -12,7 +12,8 @@ import { NotFoundComponent } from '../../partials/not-found/not-found.component'
   standalone: true,
   imports: [StarRatingComponent,CommonModule,NotFoundComponent],
   templateUrl: './food-page.component.html',
-  styleUrl: './food-page.component.css'
+  styleUrl: './food-page.component.css',
+  providers:[FoodService]
 })
 export class FoodPageComponent implements OnInit {
   food!:Food
@@ -20,7 +21,10 @@ export class FoodPageComponent implements OnInit {
     activatedRoute.params.subscribe((params)=>{
       if(params.id)
       {
-        this.food = foodService.getFoodById(params.id);
+        foodService.getFoodById(params.id)
+        .subscribe((serverFood: Food) =>{
+          this.food = serverFood;
+        });
       }
     })
   }
@@ -35,3 +39,4 @@ export class FoodPageComponent implements OnInit {
   }
 
 }
+
