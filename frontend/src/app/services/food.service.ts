@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Food } from '../Shared/Models/Food';
-import { sample_foods } from '../components/partials/header/data';
 import { Tag } from '../Shared/Models/Tag';
-import { sample_tags } from '../../data';
 import { HttpClient } from '@angular/common/http';
 import { FOODS_BY_ID_URL, FOODS_BY_TAG_URL, FOODS_TAGS_URL, FOODS_URL } from '../Shared/constants/urls';
 import { Observable } from 'rxjs';
