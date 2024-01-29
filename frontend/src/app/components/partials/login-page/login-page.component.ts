@@ -1,21 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, InjectionToken, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { TitleComponent } from '../title/title.component';
 import { CommonModule } from '@angular/common';
+import { UserService } from '../../../services/user.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
+// export const ToastConfig = new InjectionToken<string>('TOAST_CONFIG')
 @Component({
   selector: 'app-login-page',
   standalone: true,
   imports: [CommonModule,TitleComponent,ReactiveFormsModule],
   templateUrl: './login-page.component.html',
   styleUrl: './login-page.component.css',
-  providers:[ReactiveFormsModule]
+  providers:[ReactiveFormsModule,UserService]
 })
 export class LoginPageComponent implements OnInit {
 
   loginForm!:FormGroup
   isSubmitted = false;
-  constructor( private formBuilder:FormBuilder){}
+  returnUrl = '';
+  constructor( private formBuilder:FormBuilder,private userService:UserService
+    ,private activatedRoute:ActivatedRoute,private router:Router){}
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
@@ -23,6 +28,7 @@ export class LoginPageComponent implements OnInit {
       password:['',Validators.required]
     });
 
+    this.returnUrl = this.activatedRoute.snapshot.queryParams.returnUrl;
   }
 
   get fc(){
@@ -36,5 +42,10 @@ export class LoginPageComponent implements OnInit {
 
     alert(`email : ${this.fc.email.value},
           password:${this.fc.password.value}`);
+
+    this.userService.login({email:this.fc.email.value,password: this.fc.password.value})
+    .subscribe(()=>{
+      this.router.navigateByUrl(this.returnUrl)
+    });
   }
 }

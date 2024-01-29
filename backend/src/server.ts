@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 app.use(cors({
     credentials:true,
-    origin:["http:localhost:4200"]
+    origin:["http://localhost:4200"]
 
 }));
 
@@ -54,7 +54,7 @@ app.post("/api/users/login",(req,res)=>{
 
 const generateTokenResponse = (user:any)=>{
     const token = jwt.sign({
-        email:user.email.isAdmin.isAdmin
+        email:user.email.isAdmin
     },"SomeRandomText",{
         expiresIn:"30d"
     });
