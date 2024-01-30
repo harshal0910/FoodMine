@@ -16,7 +16,7 @@ export class FoodService {
   };
 
   getAllFoodsBySearchTerm(searchTerm:string){
-    return this.http.get<Food[]>(FOODS_URL+searchTerm);
+    return this.http.get<Food[]>(FOODS_URL+"/"+searchTerm);
   }
 
   getFoodById(foodId:string):Observable<Food>{

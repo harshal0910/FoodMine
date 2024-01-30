@@ -29,4 +29,9 @@ export class UserService {
       }
     }));
    }
+
+   logout(){
+    this.userSubject.next(new User());
+    window.location.reload();    
+   }
 }
